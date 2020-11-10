@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  rabbit:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  srva:
+    build: ./service_a
+    ports:
+      - 3000:3000
+
+  srvb:
+    build: ./service_b
+    restart: on-failure
+    links:
+      - "rabbit:rabbitmq"
+    ports:
+      - 3001:3001
+  
+  srvc:
+    build: ./service_c
+    ports:
+      - 3002:3002
+  
+  srvd:
+    build: ./service_d
+    ports:
+      - 3003:3003

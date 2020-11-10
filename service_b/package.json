@@ -1,0 +1,32 @@
+{
+  "name": "service_a",
+  "version": "1.0.0",
+  "description": "service a description",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "avancadev",
+    "devops",
+    "microservices",
+    "fullcycle"
+  ],
+  "author": "Lucas Vasconcelos",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "got": "^11.8.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.16",
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.17.8",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.5"
+  }
+}
