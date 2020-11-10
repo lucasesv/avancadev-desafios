@@ -1,14 +1,6 @@
-import express from 'express';
-import cors from 'cors';
 import got from 'got';
 import amqp from 'amqplib/callback_api';
 
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 interface OrderResult {
   status: string;
@@ -78,4 +70,4 @@ function runRabbitmq() {
   });
 }
 
-app.listen(3001);
+runRabbitmq();
