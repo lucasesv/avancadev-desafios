@@ -11,15 +11,15 @@ O primeiro desafio consiste em, dado que existem 3 microserviços comunicando-se
 
 Modificar a implementação do Desafio 1 para que a comunicação entre o srv-a e srv-b ocorra através do RabbitMQ. O srv-a deverá publicar mensagens para o RabbitMQ e, por sua vez, o srv-b deverá consumí-las.
 
-![](docs/images/checkout.png)
+![](docs/images/checkout.PNG)
 
-![](docs/images/docker-processes.png)
+![](docs/images/docker-processes.PNG)
 
-![](docs/images/order-submited.png)
+![](docs/images/order-submited.PNG)
 
-![](docs/images/rabbitmq-queue-monitoring.png)
+![](docs/images/rabbitmq-queue-monitoring.PNG)
 
-![](docs/images/rabbitmq-queues.png)
+![](docs/images/rabbitmq-queues.PNG)
 
 ## Desafio 3
 
