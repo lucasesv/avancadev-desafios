@@ -11,6 +11,16 @@ O primeiro desafio consiste em, dado que existem 3 microserviços comunicando-se
 
 Modificar a implementação do Desafio 1 para que a comunicação entre o srv-a e srv-b ocorra através do RabbitMQ. O srv-a deverá publicar mensagens para o RabbitMQ e, por sua vez, o srv-b deverá consumí-las.
 
+![](docs/images/checkout.png)
+
+![](docs/images/docker-processes.png)
+
+![](docs/images/order-submited.png)
+
+![](docs/images/rabbitmq-queue-monitoring.png)
+
+![](docs/images/rabbitmq-queues.png)
+
 ## Desafio 3
 
 Gerar imagens Docker para os microserviços do Desafio 2 e subí-las para o Docker Hub. Além disso, criar um docker-compose.yaml para subir todos os microserviços, inclusive o RabbitMQ.
