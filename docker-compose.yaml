@@ -14,24 +14,23 @@ services:
       - "5672:5672"
 
   srva:
-    build: ./service_a
+    image: "engcadu/srv-a"
     ports:
       - 3000:3000
 
   srvb:
-    build: ./service_b
-    restart: on-failure
+    image: "engcadu/srv-b"
     links:
       - "rabbit:rabbitmq"
     ports:
       - 3001:3001
   
   srvc:
-    build: ./service_c
+    image: "engcadu/srv-c"
     ports:
       - 3002:3002
   
   srvd:
-    build: ./service_d
+    image: "engcadu/srv-d"
     ports:
       - 3003:3003
