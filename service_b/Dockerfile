@@ -1,11 +1,10 @@
-FROM centos
+FROM alpine
 
 WORKDIR /home/service-b
 
 COPY . .
 
-RUN dnf module enable nodejs:12 -y
-RUN dnf install nodejs -y
+RUN apk add --update nodejs npm
 RUN npm install
 
 EXPOSE 3001
